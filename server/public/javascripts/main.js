@@ -1,14 +1,22 @@
-
+// 当网页加载完后执行init方法
 document.addEventListener('DOMContentLoaded', init);
+// 用于加载数据的方法
 function loadData() {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
+      //将获取到的数据
       setData(JSON.parse(this.responseText));
     }
   };
   xhr.open("GET", "/todo", true);
   xhr.send();
+}
+
+
+function login() {
+  var xhr = new XMLHttpRequest();
+
 }
 
 function setData(data) {
@@ -49,3 +57,10 @@ function init() {
   loadData();
   addEvent();
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+})
+
+
