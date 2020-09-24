@@ -26,6 +26,17 @@ b {
   list-style: none;
   box-sizing: content-box;
 }
+*{margin:0px;padding:0px;}
+a{text-decoration-line: none;color: #00B7FF;}
+ul{list-style: none;}
+li{list-style: none;}
+.header{display: flex;}
+.headmenu-logo{display: inline;}
+.headmenu-nav{flex: 1;}
+.headmenu-nav li{list-style: none;float: left;}
+.headmenu-nav-list{padding-right: 16px;}
+.headmenu-nav a{padding-right: 16px;;}
+.headmenu-flex{display: flex;}
 
 a {
   color: #00B7FF;
