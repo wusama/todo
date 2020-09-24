@@ -12,8 +12,8 @@ Run `cd server && npm i` to install package which our app needed
 ## Start application
 Run `npm start` to start the app
 
-## fontend
-You can develop fontend in this path `/server/public`
+## frontend
+You can develop frontend in this path `/server/public`
 
 ## backend
 Backend entry file is `/server/app.js`
