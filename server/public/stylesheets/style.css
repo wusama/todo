@@ -1,0 +1,71 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+tr,
+td,
+p,
+span,
+input,
+button,
+a,
+i,
+b {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: content-box;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.page {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.input-area input[type="text"] {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  vertical-align: bottom;
+}
+
+.input-area input[type="button"] {
+  padding: 4px 10px;
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.input-area input[type="button"]:hover {
+  background-color: #eee;
+}
+
+.input-area input[type="button"]:active {
+  color: #fff;
+  background-color: green;
+}
+
+.data-area {
+  margin-top: 20px;
+  border-top: 1px solid #aaa;
+  padding-top: 20px;
+}
