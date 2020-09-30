@@ -1,0 +1,31 @@
+.place {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    user-select: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #aaa;
+}
+.place:hover{
+    box-shadow: 0 0 10px #888;
+}
+
+.home {
+    top:30px;
+    background-color: rgb(236, 129, 6);
+}
+
+.bar {
+    top: 300px;
+    background-color: #ff0;
+}
+
+.company {
+    left: 300px;
+    top: 100px;
+    color: #fff;
+    background-color: rgb(159, 15, 179);
+}
