@@ -131,10 +131,10 @@ function handleMouseUp(e) {
 // var z = (x+y)*(y-x+1)/2
 
 
-// function qiuhe(start, end){
-//     var sum = (start+end)*(end-start+1)/2;
-//     return sum;
-// }
+function qiuhe(start, end){
+    var sum = (start+end)*(end-start+1)/2;
+    return sum;
+}
 
 // var result = qiuhe(1,2);
 // // result
