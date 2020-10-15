@@ -6,6 +6,7 @@ import './less/common.less';
 // import Loading from './component/loading';
 
 const Index = lazy(() => import('./views/index')) ;
+const Click = lazy(() => import('./views/click')) ;
 
 class AppRouter extends Component {
   render() {
@@ -15,6 +16,7 @@ class AppRouter extends Component {
         <Suspense fallback={<div>loading...</div>}>
           <Switch>
             <Route path='/' exact component={Index} />
+            <Route path='/click' exact component={Click} />
             <Route path='*' render={() => <h1>404</h1>}/>
           </Switch>
         </Suspense>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { get, post, remove } from '../../lib/http';
 import './index.less';
 var todoUrl = '/api/todo';
@@ -88,6 +89,7 @@ class Index extends Component {
     return (
       <div className="indexPage">
         <h1>Todo</h1>
+        <div><Link to="/click">click page</Link></div>
         <div className="input">
           <input type="text"
             value={text}
