@@ -52,3 +52,18 @@ border: 1px solid red;
     border: 1px solid transparent;
     box-shadow: 1px 1px 5px grey;
 }
+.list:after{
+
+}
+.img{
+}
+.imgItem img{
+    width: 150px;
+    height: 150px;
+    
+}
+.btn{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #aaa;
+}

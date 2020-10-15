@@ -206,158 +206,229 @@ function mycount(a, b) {
 //     // var a =document.body;
 //     element.style.backgroundColor=color
 // } 
-document.addEventListener('DOMContentLoaded', inita)
-document.addEventListener('DOMContentLoaded', init)
+// document.addEventListener('DOMContentLoaded', inita)
+// document.addEventListener('DOMContentLoaded', init)
+// document.addEventListener('DOMContentLoaded', initb)
+// document.addEventListener('DOMContentLoaded', initc)
+document.addEventListener('DOMContentLoaded', initd)
 function inita() {
-    var arr = [
-        { id: 'demo1', BgColor: 'orange' },
-        { id: 'demo2', BgColor: 'purple' },
-        { id: 'demo3', BgColor: 'yellow' },
-        { id: 'demo4', BgColor: 'red' },
-        { id: 'demo5', BgColor: 'yellowgreen' },
-    ]
-    arr.forEach(function (item) {
-        var divElement = document.createElement('div');
-        divElement.id = item.id;
-        divElement.classList.add('block')
-        divElement.addEventListener('click', function (e) {
-            setBgColorForElement(divElement, item.BgColor)
-        })
-        document.getElementById('arr').appendChild(divElement)
+  var arr = [
+    { id: 'demo1', BgColor: 'orange' },
+    { id: 'demo2', BgColor: 'purple' },
+    { id: 'demo3', BgColor: 'yellow' },
+    { id: 'demo4', BgColor: 'red' },
+    { id: 'demo5', BgColor: 'yellowgreen' },
+  ]
+  arr.forEach(function (item) {
+    var divElement = document.createElement('div');
+    divElement.id = item.id;
+    divElement.classList.add('block')
+    divElement.addEventListener('click', function (e) {
+      setBgColorForElement(divElement, item.BgColor)
     })
+    document.getElementById('arr').appendChild(divElement)
+  })
 
 }
 function setBgColorForElement(element, color) {
-    element.style.backgroundColor = color;
+  element.style.backgroundColor = color;
 }
 
 
+// 蜡笔小新 开始
+// function init() {
+//     // 定义图片数组
+//     var imgs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(x => `./imgs/${x}.jpg`);
+//     // 创建图片列表容器div
+//     var listE·lement = document.createElement('div')
+//     listElement.classList.add('list');
 
-function init() {
-    // 定义图片数组
-    var imgs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(x => `./imgs/${x}.jpg`);
-    // 创建图片列表容器div
-    var listE·lement = document.createElement('div')
-    listElement.classList.add('list');
+//     imgs.forEach(function (path) {
 
-    imgs.forEach(function (path) {
+//         var itemEle = document.createElement('div'); // 创建每个图片的div
+//         itemEle.classList.add('item');
 
-        var itemEle = document.createElement('div'); // 创建每个图片的div
-        itemEle.classList.add('item');
-        
-        itemEle.addEventListener('click', handleSelect) // 给图片容器div添加click事件、】
-        function handleSelect() {
-            var selected = itemEle.classList.contains('selected');
-            if (selected) {
-                itemEle.classList.remove('selected')
-            } else {
-                itemEle.classList.add('selected')
-            }
-        }
+//         itemEle.addEventListener('click', handleSelect) // 给图片容器div添加click事件、】
+//         function handleSelect() {
+//             var selected = itemEle.classList.contains('selected');
+//             if (selected) {
+//                 itemEle.classList.remove('selected')
+//             } else {
+//                 itemEle.classList.add('selected')
+//             }
+//         }
 
-        var img = document.createElement('img');// 创建 图片 标签
-        img.src = path; // 设置 图片标签的图片地址
+//         var img = document.createElement('img');// 创建 图片 标签
+//         img.src = path; // 设置 图片标签的图片地址
 
-        itemEle.appendChild(img);// 将 图片 放入 图片容器
-        listElement.appendChild(itemEle)// 将所有图片容器放入列表容器
+//         itemEle.appendChild(img);// 将 图片 放入 图片容器
+//         listElement.appendChild(itemEle)// 将所有图片容器放入列表容器
+//     })
+//     // 将列表容器放入body
+//     document.body.appendChild(listElement)
+//     var btnCon = document.createElement('div')
+//     var btn = document.createElement('input');
+//     btn.type = 'button';
+//     btn.value = '提交'
+//     btn.addEventListener('click', function () {
+//         var selectedDivs = listElement.getElementsByClassName('selected');
+//         var srcs = []
+//         Array.from(selectedDivs).map(x => x.firstElementChild.src)
+//         var selectedImgs = srcs.map(x => x.split('/').pop())
+//         console.log(selectedImgs) //selectedImgs就是当前被选择的图片
+//     })
+//     btnCon.appendChild(btn)
+//     document.body.appendChild(btnCon)
+
+// }
+// // css float排列图片，添加selected类的边框css
+// document.addEventListener('DOMContentLoaded', initImg)
+// function initImg() {
+//     // 把所有img加上click方法
+//     var elementImgs = document.getElementsByClassName('image');
+
+//     Array.from(elementImgs).forEach(function (img) {
+//         img.addEventListener('click', function () {
+//             var have = img.classList.contains('selected')
+//             if (have) {
+//                 img.classList.remove('selected')
+//             } else {
+//                 img.classList.add('selected')
+//             }
+//         })
+//     })
+
+// }
+// 蜡笔小新 结束
+
+// 海绵宝宝图片例子 开始
+// function initb() {
+//     // 定义图片数组
+//     var imgs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(x => `./imgs/${x}.jpg`);
+//     // 创建图片列表容器div
+//     var listElement = document.createElement('div')
+//     listElement.classList.add('list1');
+
+//     imgs.forEach(function (path) {
+
+//         var img = document.createElement('img');// 创建 图片 标签
+//         img.src = path; // 设置 图片标签的图片地址
+
+//         var itemEle = document.createElement('div'); // 创建每个图片的div
+//         itemEle.classList.add('item');
+
+//         itemEle.addEventListener('click', handleSelect) // 给图片容器div添加click事件、】
+//         function handleSelect() {
+//             var selected = itemEle.classList.contains('selected');
+//             if (selected) {
+//                 itemEle.classList.remove('selected')
+//             } else {
+//                 itemEle.classList.add('selected')
+//             }
+//         }
+
+//         itemEle.appendChild(img);// 将 图片 放入 图片容器
+//         listElement.appendChild(itemEle)// 将所有图片容器放入列表容器
+//     })
+//     // 将列表容器放入body
+//     document.body.appendChild(listElement)
+//     var btnCon = document.createElement('div')
+//     var btn = document.createElement('input');
+//     btn.type = 'button';
+//     btn.value = '提交'
+//     btn.addEventListener('click', function () {
+//         var selectedDivs = listElement.getElementsByClassName('selected');
+//         var srcs = []
+//         Array.from(selectedDivs).map(x => x.firstElementChild.src)
+//         var selectedImgs = srcs.map(x => x.split('/').pop())
+//         console.log(selectedImgs) //selectedImgs就是当前被选择的图片
+//     })
+//     btnCon.appendChild(btn)
+//     document.body.appendChild(btnCon)
+
+// }
+// // css float排列图片，添加selected类的边框css
+// document.addEventListener('DOMContentLoaded', initImg)
+// function initImg() {
+//     // 把所有img加上click方法
+//     var elementImgs = document.getElementsByClassName('image');
+
+//     Array.from(elementImgs).forEach(function (img) {
+//         img.addEventListener('click', function () {
+//             var have = img.classList.contains('selected')
+//             if (have) {
+//                 img.classList.remove('selected')
+//             } else {
+//                 img.classList.add('selected')
+//             }
+//         })
+//     })
+
+// }
+// function initc(){
+//     var fruits= ["Banana", "Orange", "Apple", "Mango"];
+//     var htmlText = `<ul>${fruits.map(x=>`<li>${x}</li>`).join('')}</ul>`
+//     document.getElementById("demo1").innerHTML = htmlText;
+// }
+// 海绵宝宝图片例子 结束
+
+function initd() {
+  var listDiv = document.createElement('div');
+  listDiv.classList.add('list');
+  var imgs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(x => `./imgs/${x}.jpg`);
+  imgs.forEach(function (jpg, i) {
+    var itemDiv = document.createElement('div');
+    itemDiv.classList.add('item');
+    itemDiv.id = `${i}`;
+    itemDiv.addEventListener('click', function () {
+      var isSelected = this.classList.contains('selected')
+      if (isSelected) {
+        this.classList.remove('selected')
+      }
+      else {
+        this.classList.add('selected')
+      }
     })
-    // 将列表容器放入body
-    document.body.appendChild(listElement)
-    var btnCon = document.createElement('div')
-    var btn = document.createElement('input');
-    btn.type = 'button';
-    btn.value = '提交'
-    btn.addEventListener('click', function () {
-        var selectedDivs = listElement.getElementsByClassName('selected');
-        var srcs = []
-        Array.from(selectedDivs).map(x => x.firstElementChild.src)
-        var selectedImgs = srcs.map(x => x.split('/').pop())
-        console.log(selectedImgs) //selectedImgs就是当前被选择的图片
-    })
-    btnCon.appendChild(btn)
-    document.body.appendChild(btnCon)
+
+    var img = document.createElement('img');
+    img.src = jpg;
+    var imgDiv = document.createElement('div');
+    imgDiv.classList.add('imgDiv');
+    imgDiv.appendChild(img);
+    itemDiv.appendChild(imgDiv);
+    var discDiv = document.createElement('div');
+    discDiv.classList.add('descDiv')
+    discDiv.innerText = `${i}`
+    itemDiv.appendChild(discDiv);
+    listDiv.appendChild(itemDiv);
+  })
+  document.body.appendChild(listDiv);
+
+  var btn = document.createElement('div')
+  btn.classList.add('btn');
+  btn.innerText = "show ids";
+  btn.addEventListener('click', function () {
+    var selectedElements = listDiv.getElementsByClassName('selected');
+    var ids = Array.from(selectedElements).map(x => x.id)
+    send('/select', { ids })
+    console.log(ids);
+
+
+  })
+  document.body.append(btn)
 
 }
-// css float排列图片，添加selected类的边框css
-document.addEventListener('DOMContentLoaded', initImg)
-function initImg() {
-    // 把所有img加上click方法
-    var elementImgs = document.getElementsByClassName('image');
-
-    Array.from(elementImgs).forEach(function (img) {
-        img.addEventListener('click', function () {
-            var have = img.classList.contains('selected')
-            if (have) {
-                img.classList.remove('selected')
-            } else {
-                img.classList.add('selected')
-            }
-        })
-    })
-
-}
 
 
-function init() {
-    // 定义图片数组
-    var imgs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(x => `./imgs/${x}.jpg`);
-    // 创建图片列表容器div
-    var listElement = document.createElement('div')
-    listElement.classList.add('list');
-
-    imgs.forEach(function (path) {
-
-        var img = document.createElement('img');// 创建 图片 标签
-        img.src = path; // 设置 图片标签的图片地址
-
-        var itemEle = document.createElement('div'); // 创建每个图片的div
-        itemEle.classList.add('item');
-        
-        itemEle.addEventListener('click', handleSelect) // 给图片容器div添加click事件、】
-        function handleSelect() {
-            var selected = itemEle.classList.contains('selected');
-            if (selected) {
-                itemEle.classList.remove('selected')
-            } else {
-                itemEle.classList.add('selected')
-            }
-        }
-
-        itemEle.appendChild(img);// 将 图片 放入 图片容器
-        listElement.appendChild(itemEle)// 将所有图片容器放入列表容器
-    })
-    // 将列表容器放入body
-    document.body.appendChild(listElement)
-    var btnCon = document.createElement('div')
-    var btn = document.createElement('input');
-    btn.type = 'button';
-    btn.value = '提交'
-    btn.addEventListener('click', function () {
-        var selectedDivs = listElement.getElementsByClassName('selected');
-        var srcs = []
-        Array.from(selectedDivs).map(x => x.firstElementChild.src)
-        var selectedImgs = srcs.map(x => x.split('/').pop())
-        console.log(selectedImgs) //selectedImgs就是当前被选择的图片
-    })
-    btnCon.appendChild(btn)
-    document.body.appendChild(btnCon)
-
-}
-// css float排列图片，添加selected类的边框css
-document.addEventListener('DOMContentLoaded', initImg)
-function initImg() {
-    // 把所有img加上click方法
-    var elementImgs = document.getElementsByClassName('image');
-
-    Array.from(elementImgs).forEach(function (img) {
-        img.addEventListener('click', function () {
-            var have = img.classList.contains('selected')
-            if (have) {
-                img.classList.remove('selected')
-            } else {
-                img.classList.add('selected')
-            }
-        })
-    })
-
+function send(apiUrl, data) {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      //将获取到的数据
+      setData(JSON.parse(this.responseText));
+    }
+  };
+  xhr.open("POST", apiUrl, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(data));
 }
